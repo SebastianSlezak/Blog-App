@@ -21,7 +21,8 @@ require 'config/database.php';
                 <li><a href="<?= ROOT_URL ?>about.php">About</a></li>
                 <li><a href="<?= ROOT_URL ?>services.php">Services</a></li>
                 <li><a href="<?= ROOT_URL ?>contact.php">Contact</a></li>
-                <li class="nav__profile">
+                <li><a href="<?= ROOT_URL ?>signin.php">Sign in</a></li>
+                <!-- <li class="nav__profile">
                     <div class="avatar">
                         <img src="./images/avatar1.jpg">
                     </div>
@@ -29,7 +30,7 @@ require 'config/database.php';
                         <li><a href="<?= ROOT_URL ?>admin/index.php">Dashboard</a></li>
                         <li><a href="<?= ROOT_URL ?>logout.php">Logout</a></li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
 
             <button id="open__nav-btn"><i class="uil uil-bars"></i></button>
