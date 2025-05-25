@@ -17,7 +17,6 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <!-- <li><a href="signin.html">Sign in</a></li> -->
                 <li class="nav__profile">
                     <div class="avatar">
                         <img src="./images/avatar1.jpg">
