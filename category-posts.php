@@ -2,27 +2,9 @@
 include 'partials/header.php';
 ?>
 
-    <section class="featured">
-        <div class="container featured__container">
-            <div class="post__thumbnail">
-                <img src="./images/blog1.jpg">
-            </div>
-            <div class="post__info">
-                <a href="category-posts.html" class="category__button">Lifestyle</a>
-                <h2 class="post__title"><a href="post.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex.</a></h2>
-                <p class="post__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quasi? Rerum beatae, id facilis et accusantium pariatur corporis eius dolorem odit. Deleniti consequuntur esse, exercitationem qui aspernatur voluptas ab vitae.</p>
-                <div class="post__author">
-                    <div class="post__author-avatar">
-                        <img src="./images/avatar2.jpg">
-                    </div>
-                    <div class="post__author-info">
-                        <h5>By: Test Test</h5>
-                        <small>May 19, 2025 - 20:25</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <header class="category__title">
+        <h2>Category Title</h2>
+    </header>
 
     <section class="posts">
         <div class="container posts__container">

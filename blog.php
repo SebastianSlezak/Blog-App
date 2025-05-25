@@ -2,26 +2,14 @@
 include 'partials/header.php';
 ?>
 
-    <section class="featured">
-        <div class="container featured__container">
-            <div class="post__thumbnail">
-                <img src="./images/blog1.jpg">
+    <section class="search__bar">
+        <from class="container search__bar-container" action="">
+            <div>
+                <i class="uil uil-search"></i>
+                <input type="search" name="" placeholder="Search">
             </div>
-            <div class="post__info">
-                <a href="category-posts.html" class="category__button">Lifestyle</a>
-                <h2 class="post__title"><a href="post.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex.</a></h2>
-                <p class="post__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quasi? Rerum beatae, id facilis et accusantium pariatur corporis eius dolorem odit. Deleniti consequuntur esse, exercitationem qui aspernatur voluptas ab vitae.</p>
-                <div class="post__author">
-                    <div class="post__author-avatar">
-                        <img src="./images/avatar2.jpg">
-                    </div>
-                    <div class="post__author-info">
-                        <h5>By: Test Test</h5>
-                        <small>May 19, 2025 - 20:25</small>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <button type="submit" class="btn">Go</button>
+        </from>
     </section>
 
     <section class="posts">
@@ -31,7 +19,7 @@ include 'partials/header.php';
                     <img src="./images/blog2.jpg">
                 </div>
                 <div class="post__info">
-                    <a href="category-posts.html" class="category__button">Lifestyle</a>
+                    <a href="" class="category__button">Lifestyle</a>
                     <h3 class="post__title"><a href="post.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, illo!</a></h3>
                     <p class="post__body">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus modi qui perferendis reprehenderit accusamus fugiat veritatis consectetur natus dolores dignissimos!
@@ -52,7 +40,7 @@ include 'partials/header.php';
                     <img src="./images/blog3.jpg">
                 </div>
                 <div class="post__info">
-                    <a href="category-posts.html" class="category__button">Lifestyle</a>
+                    <a href="" class="category__button">Lifestyle</a>
                     <h3 class="post__title"><a href="post.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, illo!</a></h3>
                     <p class="post__body">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus modi qui perferendis reprehenderit accusamus fugiat veritatis consectetur natus dolores dignissimos!
@@ -73,7 +61,7 @@ include 'partials/header.php';
                     <img src="./images/blog4.jpg">
                 </div>
                 <div class="post__info">
-                    <a href="category-posts.html" class="category__button">Lifestyle</a>
+                    <a href="" class="category__button">Lifestyle</a>
                     <h3 class="post__title"><a href="post.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, illo!</a></h3>
                     <p class="post__body">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus modi qui perferendis reprehenderit accusamus fugiat veritatis consectetur natus dolores dignissimos!
@@ -94,7 +82,7 @@ include 'partials/header.php';
                     <img src="./images/blog5.jpg">
                 </div>
                 <div class="post__info">
-                    <a href="category-posts.html" class="category__button">Lifestyle</a>
+                    <a href="" class="category__button">Lifestyle</a>
                     <h3 class="post__title"><a href="post.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, illo!</a></h3>
                     <p class="post__body">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus modi qui perferendis reprehenderit accusamus fugiat veritatis consectetur natus dolores dignissimos!
@@ -115,7 +103,7 @@ include 'partials/header.php';
                     <img src="./images/blog6.jpg">
                 </div>
                 <div class="post__info">
-                    <a href="category-posts.html" class="category__button">Lifestyle</a>
+                    <a href="" class="category__button">Lifestyle</a>
                     <h3 class="post__title"><a href="post.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, illo!</a></h3>
                     <p class="post__body">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus modi qui perferendis reprehenderit accusamus fugiat veritatis consectetur natus dolores dignissimos!
@@ -136,7 +124,7 @@ include 'partials/header.php';
                     <img src="./images/blog7.jpg">
                 </div>
                 <div class="post__info">
-                    <a href="category-posts.html" class="category__button">Lifestyle</a>
+                    <a href="" class="category__button">Lifestyle</a>
                     <h3 class="post__title"><a href="post.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, illo!</a></h3>
                     <p class="post__body">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus modi qui perferendis reprehenderit accusamus fugiat veritatis consectetur natus dolores dignissimos!
@@ -157,7 +145,7 @@ include 'partials/header.php';
                     <img src="./images/blog8.jpg">
                 </div>
                 <div class="post__info">
-                    <a href="category-posts.html" class="category__button">Lifestyle</a>
+                    <a href="" class="category__button">Lifestyle</a>
                     <h3 class="post__title"><a href="post.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, illo!</a></h3>
                     <p class="post__body">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus modi qui perferendis reprehenderit accusamus fugiat veritatis consectetur natus dolores dignissimos!
