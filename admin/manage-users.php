@@ -1,8 +1,38 @@
 <?php
 include 'partials/header.php';
+
+$current_admin_id = $_SESSION['user-id'] ?? null;
+
+$query = "SELECT * FROM users WHERE NOT id=$current_admin_id";
+$users = mysqli_query($connection, $query);
 ?>
 
     <section class="dashboard">
+        <?php if(isset($_SESSION['add-user-success'])) : ?>
+            <div class="alert__message success container">
+                <p>
+                    <?= $_SESSION['add-user-success'];
+                    unset($_SESSION['add-user-success']);
+                    ?>
+                </p>
+            </div>
+        <?php elseif(isset($_SESSION['edit-user-success'])) : ?>
+            <div class="alert__message success container">
+                <p>
+                    <?= $_SESSION['edit-user-success'];
+                    unset($_SESSION['edit-user-success']);
+                    ?>
+                </p>
+            </div>
+        <?php elseif(isset($_SESSION['edit-user'])) : ?>
+            <div class="alert__message error container">
+                <p>
+                    <?= $_SESSION['edit-user'];
+                    unset($_SESSION['edit-user']);
+                    ?>
+                </p>
+            </div>
+        <?php endif ?>
         <div class="container dashboard__container">
             <button id="show__sidebar-btn" class="sidebar__toggle"><i class="uil uil-angle-right-b"></i></button>
             <button id="hide__sidebar-btn" class="sidebar__toggle"><i class="uil uil-angle-left-b"></i></button>
@@ -18,26 +48,28 @@ include 'partials/header.php';
                             <h5>Manage Posts</h5>
                         </a>
                     </li>
-                    <li>
-                        <a href="add-user.php"><i class="uil uil-user-plus"></i>
-                            <h5>Add User</h5>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="manage-users.php" class="active"><i class="uil uil-users-alt"></i>
-                            <h5>Manage User</h5>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="add-category.php"><i class="uil uil-edit"></i>
-                            <h5>Add Category</h5>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="manage-categories.php"><i class="uil uil-list-ul"></i>
-                            <h5>Manage Categories</h5>
-                        </a>
-                    </li>
+                    <?php if ($_SESSION['user-is-admin']): ?>
+                        <li>
+                            <a href="add-user.php"><i class="uil uil-user-plus"></i>
+                                <h5>Add User</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-users.php" class="active"><i class="uil uil-users-alt"></i>
+                                <h5>Manage User</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="add-category.php"><i class="uil uil-edit"></i>
+                                <h5>Add Category</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-categories.php"><i class="uil uil-list-ul"></i>
+                                <h5>Manage Categories</h5>
+                            </a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </aside>
             <main>
@@ -53,27 +85,15 @@ include 'partials/header.php';
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Test1 Test1</td>
-                            <td>test1</td>
-                            <td><a href="edit-user.php" class="btn sm">Edit</a></td>
-                            <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr>
-                            <td>Test2 Test2</td>
-                            <td>test2</td>
-                            <td><a href="edit-user.php" class="btn sm">Edit</a></td>
-                            <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr>
-                            <td>Test3 Test3</td>
-                            <td>test3</td>
-                            <td><a href="edit-user.php" class="btn sm">Edit</a></td>
-                            <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
-                            <td>No</td>
-                        </tr>
+                        <?php while ($user = mysqli_fetch_assoc($users)) : ?>
+                            <tr>
+                                <td><?= "{$user['firstname']} {$user['lastname']}" ?></td>
+                                <td><?= $user['username'] ?></td>
+                                <td><a href="<?= ROOT_URL ?>admin/edit-user.php?id=<?= $user['id'] ?>" class="btn sm">Edit</a></td>
+                                <td><a href="d<?= ROOT_URL ?>admin/delete-user.php?id=<?= $user['id'] ?>" class="btn sm danger">Delete</a></td>
+                                <td><?= $user['is_admin'] ? 'Yes' : 'No' ?></td>
+                            </tr>
+                        <?php endwhile; ?>
                     </tbody>
                 </table>
             </main>
